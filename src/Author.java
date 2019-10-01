@@ -4,19 +4,21 @@
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings({ "unchecked"})
+
 public class Author extends Person {
-    private ArrayList<String> books;
+    private List books;
 
     public Author(String firstName, String lastName) {
         super(firstName, lastName);
-        books = new ArrayList<>();
+        books = new ArrayList();
     }
 
     /**
      * @deprecated Use publishedBooks instead
      */
     @Deprecated
-    public List<String> publishBooks() {
+    public List<String> getBooks() {
         return books;
     }
 
@@ -33,4 +35,3 @@ public class Author extends Person {
         return String.format("%s, %s", lastName, firstName);
     }
 }
-//f
